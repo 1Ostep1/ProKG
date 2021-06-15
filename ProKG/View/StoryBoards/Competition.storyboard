@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DhX-9r-IJC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Events-->
+        <scene sceneID="ehG-eN-zmT">
+            <objects>
+                <viewController storyboardIdentifier="competitionController" id="DhX-9r-IJC" customClass="CompetitionViewController" customModule="ProKG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QD3-hq-8Fg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gVG-ex-445">
+                                <rect key="frame" x="16" y="44" width="382" height="818"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a9l-Xn-ZJA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a9l-Xn-ZJA" firstAttribute="trailing" secondItem="gVG-ex-445" secondAttribute="trailing" constant="16" id="4RZ-PB-i5m"/>
+                            <constraint firstItem="gVG-ex-445" firstAttribute="leading" secondItem="a9l-Xn-ZJA" secondAttribute="leading" constant="16" id="OJY-pl-ijS"/>
+                            <constraint firstItem="gVG-ex-445" firstAttribute="top" secondItem="a9l-Xn-ZJA" secondAttribute="top" id="Vq9-U0-dPr"/>
+                            <constraint firstItem="a9l-Xn-ZJA" firstAttribute="bottom" secondItem="gVG-ex-445" secondAttribute="bottom" id="nAE-x5-12D"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Events" image="calendar" catalog="system" id="ZRg-he-d3n"/>
+                    <navigationItem key="navigationItem" id="MvC-wD-hGi">
+                        <barButtonItem key="rightBarButtonItem" image="Filter" id="bgE-U7-7Xj">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="competitionTable" destination="gVG-ex-445" id="oFP-H5-ffk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rka-5J-C2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="440"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gBb-Dq-6Gx">
+            <objects>
+                <viewController storyboardIdentifier="detailCompetitionConrtoller" id="ncL-jV-Tus" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hiq-Vo-rbw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e1G-vJ-UQe"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rnf-sA-yJE">
+                        <barButtonItem key="leftBarButtonItem" image="Filter" id="Gbz-Ai-zPa">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kmz-2D-qrx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="440"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Filter" width="20" height="20"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

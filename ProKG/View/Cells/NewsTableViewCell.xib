@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-VariableFont_wght.ttf">
+            <string>Oswald-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="180" id="KGk-i7-Jjw" customClass="NewsTableViewCell" customModule="ProKG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qo9-x4-Jpv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-AU-O43">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.99.9999" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRH-6w-JUN">
+                        <rect key="frame" x="16" y="143" width="109" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="abF-N6-ggZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1o-sC-KwQ">
+                        <rect key="frame" x="16" y="109" width="343" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="dO7-Fg-ooW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0R-Be-oAA">
+                        <rect key="frame" x="16" y="16" width="75" height="23"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="2Ra-8J-cKs"/>
+                            <constraint firstAttribute="height" constant="23" id="KaK-WG-Rl5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qo9-x4-Jpv" secondAttribute="bottom" id="3WM-Fd-czz"/>
+                    <constraint firstAttribute="trailing" secondItem="qo9-x4-Jpv" secondAttribute="trailing" id="6oQ-Zv-O6w"/>
+                    <constraint firstAttribute="bottom" secondItem="i0M-AU-O43" secondAttribute="bottom" id="AYi-Vt-KeK"/>
+                    <constraint firstAttribute="trailing" secondItem="VRH-6w-JUN" secondAttribute="trailing" constant="250" id="CfG-Xk-UvD"/>
+                    <constraint firstItem="qo9-x4-Jpv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HPW-fW-fIS"/>
+                    <constraint firstItem="VRH-6w-JUN" firstAttribute="top" secondItem="P1o-sC-KwQ" secondAttribute="bottom" constant="4" id="Jjn-iT-Ier"/>
+                    <constraint firstItem="i0M-AU-O43" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KVt-Oe-aye"/>
+                    <constraint firstItem="i0M-AU-O43" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="M4x-ha-Whb"/>
+                    <constraint firstItem="VRH-6w-JUN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="SID-x4-3lV"/>
+                    <constraint firstAttribute="bottom" secondItem="qo9-x4-Jpv" secondAttribute="bottom" id="SOS-9K-jZU"/>
+                    <constraint firstItem="u0R-Be-oAA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Y7j-vR-yfX"/>
+                    <constraint firstAttribute="trailing" secondItem="i0M-AU-O43" secondAttribute="trailing" id="YN8-YJ-vSP"/>
+                    <constraint firstItem="P1o-sC-KwQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ZcN-M1-UBk"/>
+                    <constraint firstItem="qo9-x4-Jpv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b80-ha-U4Z"/>
+                    <constraint firstItem="qo9-x4-Jpv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gnL-4p-Zhu"/>
+                    <constraint firstAttribute="trailing" secondItem="qo9-x4-Jpv" secondAttribute="trailing" id="p86-cQ-l7d"/>
+                    <constraint firstItem="u0R-Be-oAA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="s2n-sn-t5d"/>
+                    <constraint firstItem="qo9-x4-Jpv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xcE-ib-DEj"/>
+                    <constraint firstAttribute="trailing" secondItem="P1o-sC-KwQ" secondAttribute="trailing" constant="16" id="xee-Jv-yDs"/>
+                    <constraint firstAttribute="bottom" secondItem="P1o-sC-KwQ" secondAttribute="bottom" constant="41" id="xj1-8O-vAL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryLabel" destination="u0R-Be-oAA" id="ThP-cW-0K6"/>
+                <outlet property="dateLabel" destination="VRH-6w-JUN" id="JCJ-8v-IE4"/>
+                <outlet property="newsImageView" destination="qo9-x4-Jpv" id="0D2-j7-c26"/>
+                <outlet property="titleLabel" destination="P1o-sC-KwQ" id="rNy-PO-K3h"/>
+            </connections>
+            <point key="canvasLocation" x="168.84057971014494" y="124.55357142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="gradient" width="343" height="160"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

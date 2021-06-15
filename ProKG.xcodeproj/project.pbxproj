@@ -7,43 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29867582CEA62B940934400D /* Pods_ProKG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EC4454D80E71665D16F8D1 /* Pods_ProKG.framework */; };
+		AE9D32195411FBA337EBA84C /* Pods_ProKG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF832D32C60C600BFFCC0F4 /* Pods_ProKG.framework */; };
 		F2012BFB264E583A001DFDC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2012BFA264E583A001DFDC4 /* AppDelegate.swift */; };
 		F2012BFD264E583A001DFDC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2012BFC264E583A001DFDC4 /* SceneDelegate.swift */; };
-		F2012BFF264E583A001DFDC4 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2012BFE264E583A001DFDC4 /* EventsViewController.swift */; };
+		F2012BFF264E583A001DFDC4 /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2012BFE264E583A001DFDC4 /* CompetitionViewController.swift */; };
 		F2012C02264E583A001DFDC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2012C00264E583A001DFDC4 /* Main.storyboard */; };
-		F2012C04264E583D001DFDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2012C03264E583D001DFDC4 /* Assets.xcassets */; };
 		F2012C07264E583D001DFDC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2012C05264E583D001DFDC4 /* LaunchScreen.storyboard */; };
-		F2012C12264E5871001DFDC4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2012C11264E5871001DFDC4 /* ProfileViewController.swift */; };
 		F2012C16264E587B001DFDC4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2012C15264E587B001DFDC4 /* NewsViewController.swift */; };
+		F211075E266A210E00358CF6 /* Oswald-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F211075D266A210E00358CF6 /* Oswald-VariableFont_wght.ttf */; };
 		F22E78B2264E5CED00ACB5AD /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E78B1264E5CED00ACB5AD /* NewsModel.swift */; };
-		F22E78B5264E5E5300ACB5AD /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E78B4264E5E5300ACB5AD /* NewsManager.swift */; };
 		F22E78BE264E614A00ACB5AD /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E78BC264E614A00ACB5AD /* NewsTableViewCell.swift */; };
 		F22E78BF264E614A00ACB5AD /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22E78BD264E614A00ACB5AD /* NewsTableViewCell.xib */; };
-		F22E78C3264E669B00ACB5AD /* imageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E78C2264E669B00ACB5AD /* imageExtension.swift */; };
 		F22E78CD264E84A900ACB5AD /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E78CC264E84A900ACB5AD /* constant.swift */; };
+		F233241026689B3C006A3DE2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233240F26689B3C006A3DE2 /* Extension.swift */; };
+		F23324142668A886006A3DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F23324132668A886006A3DE2 /* Assets.xcassets */; };
+		F2953EAC2668FD5A00755C7E /* DoneRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2953EAB2668FD5A00755C7E /* DoneRegistrationViewController.swift */; };
+		F2A56FDB26773955006DC5B0 /* Lato in Resources */ = {isa = PBXBuildFile; fileRef = F2A56FDA26773955006DC5B0 /* Lato */; };
+		F2A56FDE26773986006DC5B0 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2A56FDD26773986006DC5B0 /* Lato-Black.ttf */; };
+		F2A56FE2267739DC006DC5B0 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A56FE1267739DC006DC5B0 /* Auth.storyboard */; };
+		F2A56FE526773ADA006DC5B0 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A56FE426773ADA006DC5B0 /* ControllerFactory.swift */; };
+		F2A56FEE267740DE006DC5B0 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A56FED267740DE006DC5B0 /* News.storyboard */; };
+		F2A56FF4267743F0006DC5B0 /* Competition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A56FF3267743F0006DC5B0 /* Competition.storyboard */; };
+		F2A56FFA26774762006DC5B0 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A56FF926774762006DC5B0 /* UIViewController.swift */; };
+		F2A6ECE7265E2C0C009AA1C1 /* CompetitionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6ECE5265E2C0C009AA1C1 /* CompetitionTableViewCell.swift */; };
+		F2A6ECE8265E2C0C009AA1C1 /* CompetitionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A6ECE6265E2C0C009AA1C1 /* CompetitionTableViewCell.xib */; };
+		F2A6ECFA265E3DE0009AA1C1 /* DetailCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6ECF9265E3DE0009AA1C1 /* DetailCompetitionViewController.swift */; };
+		F2A9638B2664DA5C00B006FD /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9638A2664DA5C00B006FD /* RegistrationViewController.swift */; };
+		F2A9638E2664DB6500B006FD /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9638D2664DB6500B006FD /* ConfirmationViewController.swift */; };
+		F2A963912664DBE900B006FD /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A963902664DBE900B006FD /* NumberViewController.swift */; };
+		F2A963942664DC4C00B006FD /* RoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A963932664DC4C00B006FD /* RoleViewController.swift */; };
+		F2D7C2AC266A1641009FF3F8 /* Oswald in Resources */ = {isa = PBXBuildFile; fileRef = F2D7C2AB266A1641009FF3F8 /* Oswald */; };
+		F2ED1CDE2658FB69008AAEEF /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ED1CDD2658FB69008AAEEF /* HTTPRequest.swift */; };
+		F2ED1CE22658FE64008AAEEF /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ED1CE12658FE64008AAEEF /* ServerManager.swift */; };
+		F2ED1CE62659049C008AAEEF /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ED1CE52659049C008AAEEF /* ServerConstants.swift */; };
+		F2ED1CE926590591008AAEEF /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ED1CE826590591008AAEEF /* HTTPStatusCode.swift */; };
+		F2ED1CED265908AE008AAEEF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ED1CEC265908AE008AAEEF /* DetailViewController.swift */; };
+		F2ED1CF1265910B2008AAEEF /* SignInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ED1CF0265910B2008AAEEF /* SignInfo.swift */; };
+		F2ED1CF926591503008AAEEF /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ED1CF826591503008AAEEF /* EventsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		71EC4454D80E71665D16F8D1 /* Pods_ProKG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProKG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94F39F477DF66726A1D8F4E2 /* Pods-ProKG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProKG.release.xcconfig"; path = "Target Support Files/Pods-ProKG/Pods-ProKG.release.xcconfig"; sourceTree = "<group>"; };
-		C2D4A5AB983D18764E9C8CDF /* Pods-ProKG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProKG.debug.xcconfig"; path = "Target Support Files/Pods-ProKG/Pods-ProKG.debug.xcconfig"; sourceTree = "<group>"; };
+		3EF832D32C60C600BFFCC0F4 /* Pods_ProKG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProKG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EA330CF0A250C22C97B7961 /* Pods-ProKG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProKG.release.xcconfig"; path = "Target Support Files/Pods-ProKG/Pods-ProKG.release.xcconfig"; sourceTree = "<group>"; };
+		C05E895C4E79BE3C14F511F3 /* Pods-ProKG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProKG.debug.xcconfig"; path = "Target Support Files/Pods-ProKG/Pods-ProKG.debug.xcconfig"; sourceTree = "<group>"; };
 		F2012BF7264E583A001DFDC4 /* ProKG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProKG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2012BFA264E583A001DFDC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2012BFC264E583A001DFDC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F2012BFE264E583A001DFDC4 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		F2012BFE264E583A001DFDC4 /* CompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
 		F2012C01264E583A001DFDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F2012C03264E583D001DFDC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2012C06264E583D001DFDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2012C08264E583D001DFDC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2012C11264E5871001DFDC4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F2012C15264E587B001DFDC4 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		F211075D266A210E00358CF6 /* Oswald-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		F22E78B1264E5CED00ACB5AD /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
-		F22E78B4264E5E5300ACB5AD /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		F22E78BC264E614A00ACB5AD /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		F22E78BD264E614A00ACB5AD /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
-		F22E78C2264E669B00ACB5AD /* imageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageExtension.swift; sourceTree = "<group>"; };
 		F22E78CC264E84A900ACB5AD /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
+		F233240F26689B3C006A3DE2 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F23324132668A886006A3DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2953EAB2668FD5A00755C7E /* DoneRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneRegistrationViewController.swift; sourceTree = "<group>"; };
+		F2A56FDA26773955006DC5B0 /* Lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lato; sourceTree = "<group>"; };
+		F2A56FDD26773986006DC5B0 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		F2A56FE1267739DC006DC5B0 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		F2A56FE426773ADA006DC5B0 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
+		F2A56FED267740DE006DC5B0 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		F2A56FF3267743F0006DC5B0 /* Competition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Competition.storyboard; sourceTree = "<group>"; };
+		F2A56FF926774762006DC5B0 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F2A6ECE5265E2C0C009AA1C1 /* CompetitionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionTableViewCell.swift; sourceTree = "<group>"; };
+		F2A6ECE6265E2C0C009AA1C1 /* CompetitionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompetitionTableViewCell.xib; sourceTree = "<group>"; };
+		F2A6ECF9265E3DE0009AA1C1 /* DetailCompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCompetitionViewController.swift; sourceTree = "<group>"; };
+		F2A9638A2664DA5C00B006FD /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		F2A9638D2664DB6500B006FD /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		F2A963902664DBE900B006FD /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
+		F2A963932664DC4C00B006FD /* RoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleViewController.swift; sourceTree = "<group>"; };
+		F2D7C2AB266A1641009FF3F8 /* Oswald */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Oswald; sourceTree = "<group>"; };
+		F2ED1CDD2658FB69008AAEEF /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		F2ED1CE12658FE64008AAEEF /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		F2ED1CE52659049C008AAEEF /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
+		F2ED1CE826590591008AAEEF /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		F2ED1CEC265908AE008AAEEF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F2ED1CF0265910B2008AAEEF /* SignInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInfo.swift; sourceTree = "<group>"; };
+		F2ED1CF826591503008AAEEF /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +95,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29867582CEA62B940934400D /* Pods_ProKG.framework in Frameworks */,
+				AE9D32195411FBA337EBA84C /* Pods_ProKG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A59AC9EBE78E19412306B27 /* Frameworks */ = {
+		22D8D0381C4FFDF05863030A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				71EC4454D80E71665D16F8D1 /* Pods_ProKG.framework */,
+				3EF832D32C60C600BFFCC0F4 /* Pods_ProKG.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -69,8 +113,8 @@
 		CF959FDB8A73A58AD9C4F057 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C2D4A5AB983D18764E9C8CDF /* Pods-ProKG.debug.xcconfig */,
-				94F39F477DF66726A1D8F4E2 /* Pods-ProKG.release.xcconfig */,
+				C05E895C4E79BE3C14F511F3 /* Pods-ProKG.debug.xcconfig */,
+				4EA330CF0A250C22C97B7961 /* Pods-ProKG.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -78,10 +122,12 @@
 		F2012BEE264E583A001DFDC4 = {
 			isa = PBXGroup;
 			children = (
+				F2A56FDD26773986006DC5B0 /* Lato-Black.ttf */,
+				F211075D266A210E00358CF6 /* Oswald-VariableFont_wght.ttf */,
 				F2012BF9264E583A001DFDC4 /* ProKG */,
 				F2012BF8264E583A001DFDC4 /* Products */,
 				CF959FDB8A73A58AD9C4F057 /* Pods */,
-				2A59AC9EBE78E19412306B27 /* Frameworks */,
+				22D8D0381C4FFDF05863030A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,14 +142,15 @@
 		F2012BF9264E583A001DFDC4 /* ProKG */ = {
 			isa = PBXGroup;
 			children = (
+				F2ED1CDC2658FB55008AAEEF /* Server  */,
 				F22E78CB264E843D00ACB5AD /* View */,
-				F22E78CA264E842500ACB5AD /* Supportinf Stuff */,
-				F22E78C1264E668800ACB5AD /* Extensions */,
-				F22E78B7264E60A100ACB5AD /* Cells */,
 				F22E78B0264E5CD500ACB5AD /* Models */,
 				F2012C0F264E5860001DFDC4 /* Controllers */,
+				F2A56FE02677398D006DC5B0 /* Resources */,
+				F22E78C1264E668800ACB5AD /* Extensions */,
+				F22E78CA264E842500ACB5AD /* Supportinf Stuff */,
+				F2A56FF02677420B006DC5B0 /* Сommon */,
 				F2012C08264E583D001DFDC4 /* Info.plist */,
-				F22E78CC264E84A900ACB5AD /* constant.swift */,
 			);
 			path = ProKG;
 			sourceTree = "<group>";
@@ -111,9 +158,9 @@
 		F2012C0F264E5860001DFDC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F2012BFE264E583A001DFDC4 /* EventsViewController.swift */,
-				F2012C11264E5871001DFDC4 /* ProfileViewController.swift */,
-				F2012C15264E587B001DFDC4 /* NewsViewController.swift */,
+				F2ED1CEB26590894008AAEEF /* News controllers */,
+				F2A56FF62677445F006DC5B0 /* Competition */,
+				F2A963882664DA1100B006FD /* Authorization Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -122,7 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				F22E78B1264E5CED00ACB5AD /* NewsModel.swift */,
-				F22E78B4264E5E5300ACB5AD /* NewsManager.swift */,
+				F2ED1CF0265910B2008AAEEF /* SignInfo.swift */,
+				F2ED1CF826591503008AAEEF /* EventsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,6 +180,8 @@
 			children = (
 				F22E78BC264E614A00ACB5AD /* NewsTableViewCell.swift */,
 				F22E78BD264E614A00ACB5AD /* NewsTableViewCell.xib */,
+				F2A6ECE5265E2C0C009AA1C1 /* CompetitionTableViewCell.swift */,
+				F2A6ECE6265E2C0C009AA1C1 /* CompetitionTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -139,7 +189,8 @@
 		F22E78C1264E668800ACB5AD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F22E78C2264E669B00ACB5AD /* imageExtension.swift */,
+				F233240F26689B3C006A3DE2 /* Extension.swift */,
+				F2A56FF926774762006DC5B0 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -147,10 +198,9 @@
 		F22E78CA264E842500ACB5AD /* Supportinf Stuff */ = {
 			isa = PBXGroup;
 			children = (
-				F2012BFA264E583A001DFDC4 /* AppDelegate.swift */,
-				F2012BFC264E583A001DFDC4 /* SceneDelegate.swift */,
-				F2012C03264E583D001DFDC4 /* Assets.xcassets */,
 				F2012C05264E583D001DFDC4 /* LaunchScreen.storyboard */,
+				F2012BFC264E583A001DFDC4 /* SceneDelegate.swift */,
+				F2012BFA264E583A001DFDC4 /* AppDelegate.swift */,
 			);
 			path = "Supportinf Stuff";
 			sourceTree = "<group>";
@@ -158,9 +208,81 @@
 		F22E78CB264E843D00ACB5AD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F2012C00264E583A001DFDC4 /* Main.storyboard */,
+				F22E78B7264E60A100ACB5AD /* Cells */,
+				F2A56FF2267742D6006DC5B0 /* StoryBoards */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F2A56FE02677398D006DC5B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F23324132668A886006A3DE2 /* Assets.xcassets */,
+				F2D7C2AB266A1641009FF3F8 /* Oswald */,
+				F2A56FDA26773955006DC5B0 /* Lato */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F2A56FF02677420B006DC5B0 /* Сommon */ = {
+			isa = PBXGroup;
+			children = (
+				F22E78CC264E84A900ACB5AD /* constant.swift */,
+				F2A56FE426773ADA006DC5B0 /* ControllerFactory.swift */,
+			);
+			path = "Сommon";
+			sourceTree = "<group>";
+		};
+		F2A56FF2267742D6006DC5B0 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				F2012C00264E583A001DFDC4 /* Main.storyboard */,
+				F2A56FE1267739DC006DC5B0 /* Auth.storyboard */,
+				F2A56FED267740DE006DC5B0 /* News.storyboard */,
+				F2A56FF3267743F0006DC5B0 /* Competition.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		F2A56FF62677445F006DC5B0 /* Competition */ = {
+			isa = PBXGroup;
+			children = (
+				F2A6ECF9265E3DE0009AA1C1 /* DetailCompetitionViewController.swift */,
+				F2012BFE264E583A001DFDC4 /* CompetitionViewController.swift */,
+			);
+			path = Competition;
+			sourceTree = "<group>";
+		};
+		F2A963882664DA1100B006FD /* Authorization Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2A963932664DC4C00B006FD /* RoleViewController.swift */,
+				F2A963902664DBE900B006FD /* NumberViewController.swift */,
+				F2A9638D2664DB6500B006FD /* ConfirmationViewController.swift */,
+				F2A9638A2664DA5C00B006FD /* RegistrationViewController.swift */,
+				F2953EAB2668FD5A00755C7E /* DoneRegistrationViewController.swift */,
+			);
+			path = "Authorization Controllers";
+			sourceTree = "<group>";
+		};
+		F2ED1CDC2658FB55008AAEEF /* Server  */ = {
+			isa = PBXGroup;
+			children = (
+				F2ED1CDD2658FB69008AAEEF /* HTTPRequest.swift */,
+				F2ED1CE12658FE64008AAEEF /* ServerManager.swift */,
+				F2ED1CE52659049C008AAEEF /* ServerConstants.swift */,
+				F2ED1CE826590591008AAEEF /* HTTPStatusCode.swift */,
+			);
+			path = "Server ";
+			sourceTree = "<group>";
+		};
+		F2ED1CEB26590894008AAEEF /* News controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2012C15264E587B001DFDC4 /* NewsViewController.swift */,
+				F2ED1CEC265908AE008AAEEF /* DetailViewController.swift */,
+			);
+			path = "News controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,11 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2012C0B264E583D001DFDC4 /* Build configuration list for PBXNativeTarget "ProKG" */;
 			buildPhases = (
-				46B0222CAE63803127017752 /* [CP] Check Pods Manifest.lock */,
+				517EE5B1CE53E9771D76C8D3 /* [CP] Check Pods Manifest.lock */,
 				F2012BF3264E583A001DFDC4 /* Sources */,
 				F2012BF4264E583A001DFDC4 /* Frameworks */,
 				F2012BF5264E583A001DFDC4 /* Resources */,
-				D3C8439B9252AD6004B98364 /* [CP] Embed Pods Frameworks */,
+				3212F8651F57DB18EE05F987 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,17 +344,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A56FF4267743F0006DC5B0 /* Competition.storyboard in Resources */,
+				F2A56FDE26773986006DC5B0 /* Lato-Black.ttf in Resources */,
+				F211075E266A210E00358CF6 /* Oswald-VariableFont_wght.ttf in Resources */,
+				F2A56FE2267739DC006DC5B0 /* Auth.storyboard in Resources */,
+				F2D7C2AC266A1641009FF3F8 /* Oswald in Resources */,
 				F2012C07264E583D001DFDC4 /* LaunchScreen.storyboard in Resources */,
-				F2012C04264E583D001DFDC4 /* Assets.xcassets in Resources */,
+				F2A56FEE267740DE006DC5B0 /* News.storyboard in Resources */,
+				F2A6ECE8265E2C0C009AA1C1 /* CompetitionTableViewCell.xib in Resources */,
+				F2A56FDB26773955006DC5B0 /* Lato in Resources */,
 				F22E78BF264E614A00ACB5AD /* NewsTableViewCell.xib in Resources */,
 				F2012C02264E583A001DFDC4 /* Main.storyboard in Resources */,
+				F23324142668A886006A3DE2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46B0222CAE63803127017752 /* [CP] Check Pods Manifest.lock */ = {
+		3212F8651F57DB18EE05F987 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProKG/Pods-ProKG-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProKG/Pods-ProKG-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProKG/Pods-ProKG-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		517EE5B1CE53E9771D76C8D3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,23 +401,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D3C8439B9252AD6004B98364 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ProKG/Pods-ProKG-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ProKG/Pods-ProKG-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProKG/Pods-ProKG-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -278,16 +408,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F22E78C3264E669B00ACB5AD /* imageExtension.swift in Sources */,
+				F2A963912664DBE900B006FD /* NumberViewController.swift in Sources */,
+				F2A6ECFA265E3DE0009AA1C1 /* DetailCompetitionViewController.swift in Sources */,
+				F2A56FFA26774762006DC5B0 /* UIViewController.swift in Sources */,
+				F2A6ECE7265E2C0C009AA1C1 /* CompetitionTableViewCell.swift in Sources */,
 				F22E78B2264E5CED00ACB5AD /* NewsModel.swift in Sources */,
-				F2012BFF264E583A001DFDC4 /* EventsViewController.swift in Sources */,
+				F2ED1CF926591503008AAEEF /* EventsModel.swift in Sources */,
+				F2012BFF264E583A001DFDC4 /* CompetitionViewController.swift in Sources */,
 				F22E78BE264E614A00ACB5AD /* NewsTableViewCell.swift in Sources */,
 				F2012BFB264E583A001DFDC4 /* AppDelegate.swift in Sources */,
-				F2012C12264E5871001DFDC4 /* ProfileViewController.swift in Sources */,
+				F2ED1CE926590591008AAEEF /* HTTPStatusCode.swift in Sources */,
 				F2012C16264E587B001DFDC4 /* NewsViewController.swift in Sources */,
+				F2A9638B2664DA5C00B006FD /* RegistrationViewController.swift in Sources */,
+				F2A963942664DC4C00B006FD /* RoleViewController.swift in Sources */,
+				F2ED1CE62659049C008AAEEF /* ServerConstants.swift in Sources */,
 				F22E78CD264E84A900ACB5AD /* constant.swift in Sources */,
-				F22E78B5264E5E5300ACB5AD /* NewsManager.swift in Sources */,
+				F2ED1CDE2658FB69008AAEEF /* HTTPRequest.swift in Sources */,
+				F2A56FE526773ADA006DC5B0 /* ControllerFactory.swift in Sources */,
+				F2ED1CED265908AE008AAEEF /* DetailViewController.swift in Sources */,
+				F2ED1CE22658FE64008AAEEF /* ServerManager.swift in Sources */,
 				F2012BFD264E583A001DFDC4 /* SceneDelegate.swift in Sources */,
+				F2953EAC2668FD5A00755C7E /* DoneRegistrationViewController.swift in Sources */,
+				F2ED1CF1265910B2008AAEEF /* SignInfo.swift in Sources */,
+				F233241026689B3C006A3DE2 /* Extension.swift in Sources */,
+				F2A9638E2664DB6500B006FD /* ConfirmationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,13 +575,14 @@
 		};
 		F2012C0C264E583D001DFDC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2D4A5AB983D18764E9C8CDF /* Pods-ProKG.debug.xcconfig */;
+			baseConfigurationReference = C05E895C4E79BE3C14F511F3 /* Pods-ProKG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57ZJPHWU8J;
 				INFOPLIST_FILE = ProKG/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,13 +596,14 @@
 		};
 		F2012C0D264E583D001DFDC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94F39F477DF66726A1D8F4E2 /* Pods-ProKG.release.xcconfig */;
+			baseConfigurationReference = 4EA330CF0A250C22C97B7961 /* Pods-ProKG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57ZJPHWU8J;
 				INFOPLIST_FILE = ProKG/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
