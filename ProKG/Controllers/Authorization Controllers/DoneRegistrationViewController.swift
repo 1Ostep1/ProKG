@@ -13,5 +13,7 @@ class DoneRegistrationViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     shadowView.doShadow()
+    setupBackButton()
+
   }
 }

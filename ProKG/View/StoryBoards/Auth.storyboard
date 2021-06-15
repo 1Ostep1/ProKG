@@ -113,9 +113,7 @@
                             <constraint firstItem="ZYv-ix-7yc" firstAttribute="leading" secondItem="mkn-mw-egq" secondAttribute="leading" id="um8-dH-stk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iJI-12-Ppg">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="284-bh-yHS"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="iJI-12-Ppg"/>
                     <connections>
                         <outlet property="numberField" destination="Xhm-Va-2fN" id="qgl-1V-xxu"/>
                         <outlet property="shadowView" destination="cql-PA-LfX" id="Nn9-4l-MXo"/>
@@ -145,6 +143,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbN-IF-amw">
+                                <rect key="frame" x="35" y="421" width="138" height="170"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="4DG-we-GqQ"/>
+                                    <constraint firstAttribute="height" constant="170" id="VmZ-bm-Rah"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vk-d9-4Jj">
+                                <rect key="frame" x="246" y="421" width="140" height="170"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="7X9-uK-V63"/>
+                                    <constraint firstAttribute="height" constant="170" id="ZBI-QM-Pwq"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICON" translatesAutoresizingMaskIntoConstraints="NO" id="cRW-ba-ySy">
                                 <rect key="frame" x="123" y="94" width="174" height="47"/>
                                 <color key="tintColor" red="0.91872924570000003" green="0.14403945209999999" blue="0.24357712270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -193,20 +207,26 @@
                             <constraint firstItem="ydt-pQ-Q6y" firstAttribute="trailing" secondItem="caQ-Ni-DOb" secondAttribute="trailing" id="5Ls-E5-fVC"/>
                             <constraint firstItem="ydt-pQ-Q6y" firstAttribute="trailing" secondItem="Yh3-bv-UdQ" secondAttribute="trailing" constant="35" id="Bgr-hG-diO"/>
                             <constraint firstItem="caQ-Ni-DOb" firstAttribute="bottom" secondItem="xdE-MZ-Gsf" secondAttribute="bottom" id="Hg0-sE-n7v"/>
+                            <constraint firstItem="lbN-IF-amw" firstAttribute="top" secondItem="MIj-Db-L8v" secondAttribute="bottom" constant="80" id="Msl-eR-w4U"/>
                             <constraint firstItem="cRW-ba-ySy" firstAttribute="top" secondItem="ydt-pQ-Q6y" secondAttribute="top" constant="50" id="O4M-cL-OeG"/>
                             <constraint firstItem="MIj-Db-L8v" firstAttribute="top" secondItem="cRW-ba-ySy" secondAttribute="bottom" constant="130" id="Qgj-wX-sqO"/>
                             <constraint firstItem="caQ-Ni-DOb" firstAttribute="leading" secondItem="ydt-pQ-Q6y" secondAttribute="leading" id="UVk-le-GaN"/>
                             <constraint firstItem="caQ-Ni-DOb" firstAttribute="top" secondItem="xdE-MZ-Gsf" secondAttribute="top" id="UvZ-5V-0qo"/>
                             <constraint firstItem="Yh3-bv-UdQ" firstAttribute="leading" secondItem="ydt-pQ-Q6y" secondAttribute="leading" constant="35" id="bgn-d5-FCt"/>
                             <constraint firstItem="cRW-ba-ySy" firstAttribute="leading" secondItem="ydt-pQ-Q6y" secondAttribute="leading" constant="123" id="hPN-2v-ZLb"/>
+                            <constraint firstItem="7vk-d9-4Jj" firstAttribute="top" secondItem="MIj-Db-L8v" secondAttribute="bottom" constant="80" id="jvA-QE-NxJ"/>
                             <constraint firstItem="ydt-pQ-Q6y" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MIj-Db-L8v" secondAttribute="trailing" symbolic="YES" id="qoQ-QN-3ga"/>
+                            <constraint firstItem="ydt-pQ-Q6y" firstAttribute="trailing" secondItem="7vk-d9-4Jj" secondAttribute="trailing" constant="34" id="uuX-XT-YNj"/>
                             <constraint firstItem="MIj-Db-L8v" firstAttribute="leading" secondItem="ydt-pQ-Q6y" secondAttribute="leading" constant="85" id="vTm-Id-BjH"/>
                             <constraint firstItem="Yh3-bv-UdQ" firstAttribute="top" secondItem="MIj-Db-L8v" secondAttribute="bottom" constant="80" id="xaV-2k-tnb"/>
+                            <constraint firstItem="lbN-IF-amw" firstAttribute="leading" secondItem="ydt-pQ-Q6y" secondAttribute="leading" constant="35" id="zjA-af-v2V"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Профиль" image="Person" id="7pF-OW-0pb"/>
                     <navigationItem key="navigationItem" id="len-a2-A8L"/>
                     <connections>
+                        <outlet property="blurView" destination="7vk-d9-4Jj" id="Ucp-eB-GAc"/>
+                        <outlet property="blurView1" destination="lbN-IF-amw" id="5M7-Jb-Xjy"/>
                         <outlet property="judgeBtn" destination="LWw-eh-rcL" id="boX-Bf-XI5"/>
                         <outlet property="trainerBtn" destination="5Yn-Bu-v5o" id="FNt-vX-OW8"/>
                     </connections>
@@ -550,7 +570,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jE8-dP-jxI"/>
-                    <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="PDFButton" destination="0c0-S3-3rk" id="sVk-z3-k5U"/>
                         <outlet property="firstImage" destination="07O-YK-Ko0" id="dSM-Dh-S1d"/>
@@ -760,9 +779,7 @@
                             <constraint firstItem="GwQ-sa-eaZ" firstAttribute="trailing" secondItem="Pzw-UY-sgR" secondAttribute="trailing" constant="16" id="yAN-ob-83c"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tn4-yA-6V4">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="MYo-qk-hGQ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="tn4-yA-6V4"/>
                     <connections>
                         <outlet property="confirmBtn" destination="aba-Bs-hK4" id="eh8-GW-zJ2"/>
                         <outlet property="confirmationCodeField" destination="GuS-Zr-bGp" id="dNs-3W-RcR"/>

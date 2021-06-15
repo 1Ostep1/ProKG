@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireImage (3.6.0):
+    - Alamofire (~> 4.9)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: b3ce1906c23364e928a90453d99e99cb8223e34a
+
+COCOAPODS: 1.10.0

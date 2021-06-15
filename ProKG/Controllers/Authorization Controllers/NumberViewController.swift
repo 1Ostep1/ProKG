@@ -22,8 +22,10 @@ class NumberViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.hideKeyboardWhenTappedAround()
+    hideKeyboardWhenTappedAround()
     shadowView.doShadow()
+    configureTextField()
+    setupBackButton()
   }
   
   //MARK: - Placeholder Color

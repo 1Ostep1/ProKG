@@ -47,12 +47,12 @@ extension UIView {
     self.layer.borderColor = color.cgColor
     self.layer.borderWidth = 1
   }
-  func setBlur() {
-    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+  func applyBlurEffect() {
+    let blurEffect = UIBlurEffect(style: .regular)
     let blurEffectView = UIVisualEffectView(effect: blurEffect)
-    blurEffectView.frame = self.bounds
+    blurEffectView.frame = bounds
     blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-    self.addSubview(blurEffectView)
+    addSubview(blurEffectView)
   }
   func setShadowOffset() {
     self.alpha = 0.8

@@ -16,15 +16,20 @@ public extension UIViewController {
     navigationController?.setNavigationBarHidden(false, animated: true)
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
-    navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "SFUIDisplay-Regular", size: 18) ?? UIFont.systemFont(ofSize: 18)]
+    navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                                               NSAttributedString.Key.font: UIFont(name: "SFUIDisplay-Regular", size: 18) ?? UIFont.systemFont(ofSize: 18)]
     navigationController?.navigationBar.isTranslucent = true
   }
   func setUpScrollViewContent(with view: UIScrollView, _ size: CGFloat) {
-    view.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height + size)
+    view.contentSize = CGSize(width: self.view.frame.width,
+                              height: self.view.frame.height + size)
   }
   func setUpLogoToTitle() {
     let logo = UIImage(named: "ICON.png")
-    let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 80, height: 25))
+    let imageView = UIImageView(frame: CGRect(x: 0, 
+                                              y: 0,
+                                              width: 80,
+                                              height: 25))
     imageView.image = logo
     imageView.tintColor = .white
     imageView.contentMode = .scaleAspectFit

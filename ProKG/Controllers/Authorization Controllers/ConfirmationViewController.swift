@@ -29,6 +29,8 @@ class ConfirmationViewController: UIViewController {
     shadowView.doShadow()
     resendBtn.setUpBorder(with: .white)
     configureTextField()
+    setupBackButton()
+
   }
   //MARK: - Configure Text Field
   

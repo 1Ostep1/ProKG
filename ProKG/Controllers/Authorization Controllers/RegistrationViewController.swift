@@ -40,6 +40,8 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
     firstImage.makeCircledCorner(with: .lightGray)
     secondImage.makeCircledCorner(with: .lightGray)
     registrationBtn.makeCircledCorner()
+    setupBackButton()
+
   }
   
   //MARK: - Actions

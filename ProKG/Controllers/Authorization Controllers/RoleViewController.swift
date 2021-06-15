@@ -11,6 +11,8 @@ class RoleViewController: UIViewController {
 
   //MARK: - Outlets
   
+  @IBOutlet weak var blurView: UIView!
+  @IBOutlet weak var blurView1: UIView!
   @IBOutlet weak var judgeBtn: UIButton!
   @IBOutlet weak var trainerBtn: UIButton!
   
@@ -26,12 +28,18 @@ class RoleViewController: UIViewController {
     judgeBtn.backgroundColor = UIColor(white: 0, alpha: 0.5)
     trainerBtn.backgroundColor = UIColor(white: 0, alpha: 0.5)
     setupTransparentNavigationBar()
-    judgeBtn.alignTextBelow()
-    trainerBtn.alignTextBelow()
+    configureButton()
   }
   
   //MARK: - Actions
-  
+  private func configureButton() {
+    judgeBtn.alignTextBelow()
+    trainerBtn.alignTextBelow()
+    blurView.applyBlurEffect()
+    blurView1.applyBlurEffect()
+    blurView.makeCircledCorner()
+    blurView1.makeCircledCorner()
+  }
   @IBAction func judgeTapped(_ sender: UIButton) {
     navigationController?.pushViewController(numberController, animated: true)
   }
