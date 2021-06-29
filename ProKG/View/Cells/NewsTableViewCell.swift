@@ -16,7 +16,11 @@ class NewsTableViewCell: UITableViewCell {
     categoryLabel.makeCircledBorder()
     newsImageView.setShadowOffset()
   }
-  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    let margins = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
+    contentView.frame = contentView.frame.inset(by: margins)
+  }
   //MARK: - Configure Cell
   
   func setUpCell(with cell: NewsModel) {

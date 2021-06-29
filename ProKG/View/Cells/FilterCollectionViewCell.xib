@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Bold.ttf">
+            <string>Oswald-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filterCell" id="gTV-IL-0wX" customClass="FilterCollectionViewCell" customModule="ProKG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="156" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="156" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GXE-Te-rnv">
+                        <rect key="frame" x="0.0" y="0.0" width="156" height="100"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="ukv-gi-Oqm">
+                        <rect key="frame" x="0.0" y="0.0" width="156" height="100"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Национальныe viды спорта" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apv-Yz-4Zm">
+                        <rect key="frame" x="8" y="45.5" width="136" height="41.5"/>
+                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXb-IJ-q5n">
+                        <rect key="frame" x="8" y="95" width="135" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="swW-Gl-91M"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="lXb-IJ-q5n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="1Ps-nB-lVk"/>
+                <constraint firstItem="lXb-IJ-q5n" firstAttribute="top" secondItem="apv-Yz-4Zm" secondAttribute="bottom" constant="8" id="1vR-g3-NZN"/>
+                <constraint firstItem="ukv-gi-Oqm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3pn-P7-ql2"/>
+                <constraint firstAttribute="bottom" secondItem="lXb-IJ-q5n" secondAttribute="bottom" constant="4" id="5WX-7g-I3B"/>
+                <constraint firstAttribute="trailing" secondItem="apv-Yz-4Zm" secondAttribute="trailing" constant="12" id="6YY-yq-LXe"/>
+                <constraint firstAttribute="trailing" secondItem="ukv-gi-Oqm" secondAttribute="trailing" id="9LL-IJ-92q"/>
+                <constraint firstAttribute="bottom" secondItem="GXE-Te-rnv" secondAttribute="bottom" id="CYI-0y-JBb"/>
+                <constraint firstItem="apv-Yz-4Zm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Haj-Sc-fXt"/>
+                <constraint firstItem="GXE-Te-rnv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="N08-j0-xAH"/>
+                <constraint firstItem="GXE-Te-rnv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bSk-pC-N36"/>
+                <constraint firstAttribute="bottom" secondItem="ukv-gi-Oqm" secondAttribute="bottom" id="cCR-RJ-5Ax"/>
+                <constraint firstItem="ukv-gi-Oqm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eCn-fM-iwy"/>
+                <constraint firstAttribute="trailing" secondItem="lXb-IJ-q5n" secondAttribute="trailing" constant="13" id="h2E-tc-FDR"/>
+                <constraint firstAttribute="trailing" secondItem="GXE-Te-rnv" secondAttribute="trailing" id="rc5-hx-uld"/>
+            </constraints>
+            <connections>
+                <outlet property="imageLabel" destination="GXE-Te-rnv" id="AEP-u4-Bkn"/>
+                <outlet property="titleLabel" destination="apv-Yz-4Zm" id="r1a-7g-shl"/>
+            </connections>
+            <point key="canvasLocation" x="37.681159420289859" y="76.339285714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="gradient" width="343" height="160"/>
+    </resources>
+</document>

@@ -6,32 +6,37 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class NumberViewController: UIViewController {
   
   //MARK: - Outlets 
   
-  @IBOutlet var shadowView: UIView!
-  @IBOutlet var numberField: UITextField!
+  @IBOutlet weak var shadowView: UIView!
+  @IBOutlet weak var numberField: UITextField!
+  @IBOutlet weak var logInBtn: UIButton!
   
   //MARK: - Properties
   
-  private lazy var confirmController = ControllerFactory.confirmController()
+  private var currentVerificationId = ""
+  private lazy var confirmController = ConfirmationViewController.getVC(storyboardName: Storyboards.Auth.rawValue) 
   
   //MARK: - Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     hideKeyboardWhenTappedAround()
-    shadowView.doShadow()
     configureTextField()
     setupBackButton()
+    shadowView.applyBlurEffect(with: .prominent)
+    shadowView.makeCircledCorner(with: .black, radius: shadowView.frame.height/10)
+    logInBtn.makeCircledCorner(with: .competitionCategory, radius: 5, cornerColor: .clear)
   }
   
   //MARK: - Placeholder Color
   
   private func configureTextField() {
-    numberField.setUpPlaceHolderColor(with: .darkGray, text: "+996 (505) 21-11-02")
+    numberField.setUpPlaceHolderColor(with: .darkGray, text: "+996 (XXX) XX-XX-XX")
     numberField.layer.cornerRadius = 5
     numberField.layer.masksToBounds = true
     numberField.keyboardType = .numberPad
@@ -41,7 +46,22 @@ class NumberViewController: UIViewController {
   //MARK: - Actions
   
   @IBAction func logIn(_ sender: UIButton) {
-    navigationController?.pushViewController(confirmController, animated: true)
+//    Auth.auth().languageCode = "en"
+//    guard let phoneNumber = numberField.text, !(phoneNumber.count <= 12) else {
+//      createAlert(with: "ERROR", message: "NOT CORRECT PHONE NUMBER")
+//      return
+//    }
+//    PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
+//      if let error = error {
+//        print(error.localizedDescription)
+//        self.createAlert(with: "ERROR", message: "NOT CORRECT PHONE NUMBER")
+//        return
+//      }
+//      K.Deafaults.veificationID = verificationID!
+//      self.navigationController?.pushViewController(self.confirmController, animated: true)
+//    }
+    self.navigationController?.pushViewController(self.confirmController, animated: true)
+
   }
 }
 //MARK: - Phone mask (+996 (505)-21-11-02)

@@ -11,7 +11,7 @@ import AlamofireImage
 
 extension UILabel {
   func compColor(_ text: String) {
-    self.backgroundColor = (text == "Завершено") ? UIColor.blue.withAlphaComponent(0.8) : UIColor.systemGreen.withAlphaComponent(0.8)
+    self.backgroundColor = (text == "Завершено") ? UIColor.blue.withAlphaComponent(0.8) : UIColor.init(named: "RegistrationColor")?.withAlphaComponent(0.8)
   }
   func makeCircledBorder() {
     self.layer.cornerRadius = 5
@@ -38,17 +38,15 @@ extension UITextField {
   } 
 }
 extension UIView {
-  func makeCircledCorner(with backgroundColor: UIColor = .systemRed) {
-    self.layer.cornerRadius = 5
+  func makeCircledCorner(with backgroundColor: UIColor = .red, radius: CGFloat = 5, cornerColor: UIColor = .clear) {
+    self.layer.cornerRadius = radius
+    self.layer.borderColor = cornerColor.cgColor
+    self.layer.borderWidth = 1
     self.layer.masksToBounds = true
     self.backgroundColor = backgroundColor
   }
-  func setUpBorder(with color: UIColor) {
-    self.layer.borderColor = color.cgColor
-    self.layer.borderWidth = 1
-  }
-  func applyBlurEffect() {
-    let blurEffect = UIBlurEffect(style: .regular)
+  func applyBlurEffect(with style: UIBlurEffect.Style = .dark) {
+    let blurEffect = UIBlurEffect(style: style)
     let blurEffectView = UIVisualEffectView(effect: blurEffect)
     blurEffectView.frame = bounds
     blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -62,9 +60,6 @@ extension UIView {
     self.layer.shadowRadius = 1
     self.layer.shadowOpacity = 0.5
     self.layer.shadowRadius = 10
-  }
-  func doShadow() {
-    self.backgroundColor = UIColor(white: 0, alpha: 0.5)
   }
 }
 extension UIImageView {
@@ -82,6 +77,13 @@ extension UIImageView {
   }
 }
 extension UIButton {
+  public class var yourAttributes: [NSAttributedString.Key: Any] {
+    return [
+      .font: UIFont.systemFont(ofSize: 14),
+      .foregroundColor: UIColor.competitionCategory,
+      .underlineStyle: NSUnderlineStyle.single.rawValue
+    ] 
+  }
   func alignTextBelow(spacing: CGFloat = 6.0){
     if let image = self.imageView?.image {
       let imageSize: CGSize = image.size

@@ -16,10 +16,37 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>BaseIOSIdentifier</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.808422037000-acbq6en1e9fbd78h9h2qoeliihmtdsqd</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Would you access your camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Would you access your photo library</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Oswald-Regular.ttf</string>
+		<string>Lato-Black.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -62,19 +89,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Oswald-Regular.ttf</string>
-		<string>Lato-Black.ttf</string>
-	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>Would you access your camera</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Would you access your photo library</string>
 </dict>
 </plist>

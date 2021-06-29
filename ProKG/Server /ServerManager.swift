@@ -36,14 +36,14 @@ extension ServerManager {
       print(error)
     }
   }
-  func getNews(token: String, complition: @escaping ([NewsModel]) -> () , error: @escaping (String) -> ()) {
-    let headers = ["Authorization": "Bearer \(token)"]
-    get(url: "https://sportpro3.herokuapp.com/api/news/news/", header: headers) { (data) in
+  func getNews(complition: @escaping ([NewsModel]) -> () , error: @escaping (String) -> ()) {
+    let headers = ["Content-Type": "application/json"]
+    get(url: "https://sportpro3.herokuapp.com/api/news/", header: headers) { (data) in
       guard let data = data else {return}
       do {
         let convertedData = try JSONDecoder().decode([NewsModel].self, from: data)
         complition(convertedData)
-      } catch let er {
+      } catch let er {        
         print(er.localizedDescription)
       }
     } error: { (err) in

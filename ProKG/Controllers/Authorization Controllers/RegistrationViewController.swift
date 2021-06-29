@@ -9,7 +9,7 @@ import UIKit
 import Photos
 
 class RegistrationViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-
+  
   //MARK: - Outlets
   
   @IBOutlet var shadowView: UIView!
@@ -25,27 +25,43 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
   @IBOutlet var secondImage: UIImageView!
   @IBOutlet var scrollView: UIScrollView!
   @IBOutlet var registrationBtn: UIButton!
+  @IBOutlet weak var nameCorrectLabel: UILabel!
+  @IBOutlet weak var surnameCorrectLabel: UILabel!
+  @IBOutlet weak var patronCorrectName: UILabel!
   
   //MARK: - Properties
   
-  private lazy var doneController = ControllerFactory.doneController()
-  
+  private lazy var doneController = DoneRegistrationViewController.getVC(storyboardName: Storyboards.Auth.rawValue)
   //MARK: - Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    shadowView.doShadow()
-    PDFButton.setUpBorder(with: .white)
-    PDFButton.makeCircledCorner(with: .clear)
-    firstImage.makeCircledCorner(with: .lightGray)
-    secondImage.makeCircledCorner(with: .lightGray)
-    registrationBtn.makeCircledCorner()
     setupBackButton()
-
+    comfigureUI()
   }
   
   //MARK: - Actions
-  
+  private func comfigureUI() {
+    nameField.delegate = self
+    surnameField.delegate = self
+    patronymicField.delegate = self
+    shadowView.applyBlurEffect(with: .prominent)
+    shadowView.makeCircledCorner(with: .clear, radius: 16)
+    surnameField.makeCircledCorner(with: .clear, radius: 8)
+    nameField.makeCircledCorner(with: .clear, radius: 8)
+    patronymicField.makeCircledCorner(with: .clear, radius: 8)
+    regionField.makeCircledCorner(with: .clear, radius: 8)
+    sportCategory.makeCircledCorner(with: .clear, radius: 8)
+    sportCategory.makeCircledCorner(with: .clear, radius: 8)
+    sportType.makeCircledCorner(with: .clear, radius: 8)
+    organizationField.makeCircledCorner(with: .clear, radius: 8)
+    PDFButton.makeCircledCorner(with: .clear, radius: 8, cornerColor: .white)
+    firstImage.makeCircledCorner(with: .clear, radius: 8)
+    secondImage.makeCircledCorner(with: .clear,radius: 8)
+    firstImage.applyBlurEffect()
+    secondImage.applyBlurEffect()
+    registrationBtn.makeCircledCorner(with: .competitionCategory, radius: 8, cornerColor: .clear)
+  }
   @IBAction func PDFTapped(_ sender: UIButton) {
     showAlert()
   }
@@ -87,7 +103,7 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     self.dismiss(animated: true) { [weak self] in
-  
+      
       guard let self = self else {return}
       guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
       //Setting image to your image view
@@ -102,3 +118,36 @@ class RegistrationViewController: UIViewController, UIImagePickerControllerDeleg
     picker.dismiss(animated: true, completion: nil)
   }
 }
+extension RegistrationViewController: UITextFieldDelegate {
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    do {
+      let regex = try NSRegularExpression(pattern: ".*[^A-Za-z].*", options: [])
+      if regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) != nil {
+        textField.layer.borderColor = UIColor.red.cgColor
+        switch textField {
+        case nameField:
+          nameCorrectLabel.isHidden = false
+        case surnameField:
+          surnameCorrectLabel.isHidden = false
+        default:
+          patronCorrectName.isHidden = false
+        }
+        return false
+      }
+    }
+    catch {
+      print("ERROR")
+    }
+    textField.layer.borderColor = UIColor.green.cgColor
+    switch textField {
+    case nameField:
+      nameCorrectLabel.isHidden = true
+    case surnameField:
+      surnameCorrectLabel.isHidden = true
+    default:
+      patronCorrectName.isHidden = true
+    }
+    return true
+  }
+}
+

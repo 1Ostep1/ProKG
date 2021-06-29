@@ -6,31 +6,30 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class DetailCompetitionViewController: UIViewController {
-  
-  @IBOutlet var first: UIView!
-  @IBOutlet var second: UIView!
-  @IBOutlet var typeControl: UISegmentedControl!
+class DetailCompetitionViewController: ButtonBarPagerTabStripViewController {
   override func viewDidLoad() {
+    setupBackButton(with: "Назад")
+    setupTransparentNavigationBar()
+    settings.style.buttonBarBackgroundColor = .black
+    settings.style.buttonBarItemBackgroundColor = .clear
+    settings.style.selectedBarBackgroundColor = .red
+    settings.style.buttonBarItemFont = UIFont(name: "Oswald-Regular", size: 16)!
+    settings.style.selectedBarHeight = 2
+    settings.style.buttonBarMinimumLineSpacing = 0
+    settings.style.buttonBarItemTitleColor = .white
+    settings.style.buttonBarItemsShouldFillAvailableWidth = true
+    settings.style.buttonBarMinimumInteritemSpacing = 2
+    settings.style.buttonBarItemLeftRightMargin = 30
     super.viewDidLoad()
-    let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-    typeControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
-    typeControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
-    // Do any additional setup after loading the view.
-
   }
-  
-  @IBAction func action(_ sender: UISegmentedControl) {
-    switch sender.selectedSegmentIndex {
-    case 0:
-      first.isHidden = false
-      second.isHidden = true
-    case 1:
-      first.isHidden = true
-      second.isHidden = false
-    default:
-        break
-    }
+  override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+    let reglamentController = ReglamentViewController.getVC(storyboardName: Storyboards.Competition.rawValue)
+    let teamController = TeamViewController.getVC(storyboardName: Storyboards.Competition.rawValue)
+    let membersController = MembersViewController.getVC(storyboardName: Storyboards.Competition.rawValue)
+    let gridController = GridViewController.getVC(storyboardName: Storyboards.Competition.rawValue)
+    let resultsController = ResultsViewController.getVC(storyboardName: Storyboards.Competition.rawValue)
+    return [reglamentController, teamController, membersController, gridController, resultsController]
   }
 }

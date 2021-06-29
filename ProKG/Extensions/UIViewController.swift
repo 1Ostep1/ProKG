@@ -25,26 +25,12 @@ public extension UIViewController {
                               height: self.view.frame.height + size)
   }
   func setUpLogoToTitle() {
-    let logo = UIImage(named: "ICON.png")
-    let imageView = UIImageView(frame: CGRect(x: 0, 
-                                              y: 0,
-                                              width: 80,
-                                              height: 25))
-    imageView.image = logo
+    let logo = UIImage(named: "LOGO.png")
+    let imageView = UIImageView(image: logo)
+    imageView.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
     imageView.tintColor = .white
-    imageView.contentMode = .scaleAspectFit
+    imageView.contentMode = .center
     self.navigationItem.titleView = imageView
-  }
-  func setUpHeader(with text: String, _ tableView: UITableView) -> UIView {
-    let sectionLabel = UILabel(frame: CGRect(x: 8,
-                                             y: 0,
-                                             width: tableView.bounds.size.width,
-                                             height: tableView.bounds.size.height))
-    sectionLabel.font = UIFont(name: "Oswald", size: 24)
-    sectionLabel.textColor = .white
-    sectionLabel.text = text
-    sectionLabel.sizeToFit()
-    return sectionLabel
   }
   func createAlert(with title: String, message: String) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -58,5 +44,20 @@ public extension UIViewController {
   }
   @objc func dismissKeyboard() {
     view.endEditing(true)
+  }
+  func setDefaultImage(name: String, surname: String, image: UIImageView) {
+    let lblNameInitialize = UILabel()
+    lblNameInitialize.frame.size = CGSize(width: 100.0, height: 100.0)
+    lblNameInitialize.textColor = .competitionCategory
+    lblNameInitialize.font = UIFont(name: "Lato-Regular", size: 50)
+    lblNameInitialize.text = String(name.first!) + String(surname.first!)
+    lblNameInitialize.textAlignment = .center
+    lblNameInitialize.backgroundColor = .white
+    lblNameInitialize.layer.cornerRadius = 50.0
+    
+    UIGraphicsBeginImageContext(lblNameInitialize.frame.size)
+    lblNameInitialize.layer.render(in: UIGraphicsGetCurrentContext()!)
+    image.image = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
   }
 }

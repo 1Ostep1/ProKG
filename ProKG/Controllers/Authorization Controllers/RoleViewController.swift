@@ -18,15 +18,13 @@ class RoleViewController: UIViewController {
   
   //MARK: - Properties
   
-  private lazy var numberController = ControllerFactory.numberController()
+  private lazy var numberController = NumberViewController.getVC(storyboardName: Storyboards.Auth.rawValue)
   
   //MARK: - Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupBackButton() 
-    judgeBtn.backgroundColor = UIColor(white: 0, alpha: 0.5)
-    trainerBtn.backgroundColor = UIColor(white: 0, alpha: 0.5)
     setupTransparentNavigationBar()
     configureButton()
   }
@@ -35,13 +33,14 @@ class RoleViewController: UIViewController {
   private func configureButton() {
     judgeBtn.alignTextBelow()
     trainerBtn.alignTextBelow()
-    blurView.applyBlurEffect()
-    blurView1.applyBlurEffect()
-    blurView.makeCircledCorner()
-    blurView1.makeCircledCorner()
+    blurView.applyBlurEffect(with: .prominent)
+    blurView1.applyBlurEffect(with: .prominent)
+    blurView.makeCircledCorner(with: .black, radius: blurView.frame.height/10)
+    blurView1.makeCircledCorner(with: .black, radius: blurView.frame.height/10)
   }
   @IBAction func judgeTapped(_ sender: UIButton) {
-    navigationController?.pushViewController(numberController, animated: true)
+    let controller = JudgeProfileViewController.getVC(storyboardName: Storyboards.Profile.rawValue)
+    navigationController?.pushViewController(controller, animated: true)
   }
   @IBAction func trainerTapped(_ sender: UIButton) {
     navigationController?.pushViewController(numberController, animated: true)

@@ -6,4 +6,5 @@ use_frameworks!
 pod 'Alamofire'
 pod 'AlamofireImage'
 pod 'XLPagerTabStrip'
+pod 'Firebase/Auth'
 end

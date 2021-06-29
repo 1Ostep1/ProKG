@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ConfirmationViewController: UIViewController {
 
@@ -18,16 +19,19 @@ class ConfirmationViewController: UIViewController {
   
   //MARK: - Properties
   
-  private lazy var registrationController = ControllerFactory.registrationController()
+  private lazy var registrationController = RegistrationViewController.getVC(storyboardName: Storyboards.Auth.rawValue)
   private var code = ""
-  
+  private var phoneNumb = "+996505211102"
+
   //MARK: - Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     hideKeyboardWhenTappedAround()
-    shadowView.doShadow()
-    resendBtn.setUpBorder(with: .white)
+    shadowView.applyBlurEffect(with: .prominent)
+    shadowView.makeCircledCorner(with: .black, radius: 16)
+    resendBtn.makeCircledCorner(with: .clear, radius: 5, cornerColor: .white)
+    confirmBtn.makeCircledCorner(with: .competitionCategory, radius: 5, cornerColor: .clear)
     configureTextField()
     setupBackButton()
 
@@ -42,10 +46,30 @@ class ConfirmationViewController: UIViewController {
   
   //MARK: - Actions
   @IBAction func confirmTapped(_ sender: UIButton) {
-    print("confirmed with \(code)")
-    navigationController?.pushViewController(registrationController, animated: true)
+    verifyNumberWith(verificationCode: code)
+    self.navigationController?.pushViewController(self.registrationController, animated: true)
   }
   @IBAction func resendTapped(_ sender: UIButton) {
+    sendOTPCode(with: phoneNumb)
+  }
+  private func verifyNumberWith(verificationCode: String) {
+//    let credential = PhoneAuthProvider.provider().credential(
+//      withVerificationID: K.Deafaults.veificationID,
+//      verificationCode: verificationCode)
+//    Auth.auth().signIn(with: credential) { (authResult, error) in
+//      self.navigationController?.pushViewController(self.registrationController, animated: true)
+//    }
+  }
+  private func sendOTPCode(with phoneNumber:String){
+    PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
+      if let error = error {
+        print(error.localizedDescription)
+        return
+      }else{
+        print(verificationID!)
+//        K.Deafaults.veificationID = verificationID!
+      }
+    }
   }
 }
 //MARK: - Code mask

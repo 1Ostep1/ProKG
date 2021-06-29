@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+  
+  let font = UIFont(name: "Oswald-Bold", size: 13)
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font ?? UIFont(name: "Lato", size: 13) as Any], for: .normal)
+    FirebaseApp.configure()
     return true
   }
 

@@ -16,5 +16,13 @@ struct K {
   
   struct Deafaults {
     static let token = /*UserDefaults.standard.string(forKey: "token") as! String*/""
+    static var veificationID: String {
+      get {
+        return UserDefaults.standard.string(forKey: "authVerificationID")!
+      }
+      set{ 
+        UserDefaults.standard.setValue(self, forKey: "authVerificationID")
+      }
+    }
   }
 }
